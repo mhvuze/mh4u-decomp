@@ -7,6 +7,13 @@ No source code, tools or game data are published yet. This repository only holds
 match percentages, grouped by class), which a GitHub Actions workflow uploads to
 [decomp.dev](https://decomp.dev).
 
+Exact-match code and function counts come from the verified build. Fuzzy progress also counts the
+instruction similarity of compiled, unfinished C/C++ candidates, weighted by original function
+size. It measures generated machine code, not source-line alignment or behavioral equivalence.
+Scores are pinned to the current source, target, compiler and scoring inputs; stale scores receive
+no credit. Unfinished candidates do not add to perfect-match counts, and this report does not yet
+claim fully linked source completion.
+
 ## Support
 
 If you would like to help, you can donate to this Solana address:
