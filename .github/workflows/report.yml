@@ -1,0 +1,17 @@
+name: Progress report
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload progress report
+        uses: actions/upload-artifact@v4
+        with:
+          name: EU_v1.1_report
+          path: report.json
