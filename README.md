@@ -1,11 +1,13 @@
-# mh4u-decomp [![Code](https://decomp.dev/mhvuze/mh4u-decomp.svg?mode=shield&measure=code&label=Code)](https://decomp.dev/mhvuze/mh4u-decomp) [![Code (Fuzzy)](https://decomp.dev/mhvuze/mh4u-decomp.svg?mode=shield&measure=fuzzy_match&label=Code%20(Fuzzy))](https://decomp.dev/mhvuze/mh4u-decomp) [![Functions](https://decomp.dev/mhvuze/mh4u-decomp.svg?mode=shield&measure=functions&label=Functions)](https://decomp.dev/mhvuze/mh4u-decomp)
+# mh4u-decomp [![Code](https://bytematch.dev/mhvuze/mh4u-decomp.svg?mode=shield&label=Code&measure=matched_code_percent)](https://bytematch.dev/mhvuze/mh4u-decomp) [![Code (Fuzzy)](https://bytematch.dev/mhvuze/mh4u-decomp.svg?mode=shield&label=Code%20(Fuzzy)&measure=fuzzy_match_percent)](https://bytematch.dev/mhvuze/mh4u-decomp) [![Functions](https://bytematch.dev/mhvuze/mh4u-decomp.svg?mode=shield&label=Functions&measure=matched_functions)](https://bytematch.dev/mhvuze/mh4u-decomp)
 
 Progress tracking for a matching decompilation of Monster Hunter 4 Ultimate (Nintendo 3DS, EU v1.1).
 
 No source code, tools or game data are published yet. This repository only holds `report.json`, an
 [objdiff](https://github.com/encounter/objdiff) progress report (function names, addresses, sizes and
-match percentages, grouped by class), which a GitHub Actions workflow uploads to
-[decomp.dev](https://decomp.dev).
+match percentages, grouped by class), which a GitHub Actions workflow uploads as the
+`EU_v1.1_report` artifact. [ByteMatch](https://bytematch.dev/mhvuze/mh4u-decomp) reads this artifact
+from successful runs on `main`. The latest progress is also available as
+[JSON](https://bytematch.dev/mhvuze/mh4u-decomp.json).
 
 Exact-match code and function counts come from the verified build. Fuzzy progress also counts the
 instruction similarity of compiled, unfinished C/C++ candidates, weighted by original function

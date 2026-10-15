@@ -10,8 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Upload progress report
+      - name: Upload progress report for ByteMatch
         uses: actions/upload-artifact@v4
         with:
+          # ByteMatch discovers objdiff reports as <VERSION>_report artifacts.
           name: EU_v1.1_report
           path: report.json
+          if-no-files-found: error
